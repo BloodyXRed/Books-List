@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <link rel="stylesheet" href="books.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Enter Book title</h1>
+        <input type="text" placeholder="e.g. 1984" id="title" class="inp">
+        <p id="Errortitle">You need to enter the title of the book</p>
+        <h1>Enter Author Name</h1>
+        <input type="text" placeholder="e.g. Georges Orwell" id="author" class="inp">
+        <p id="Errorauthor">You need to enter the author of the book</p>
+        <h1>Enter Price</h1>
+        <input type="number" placeholder="e.g. 15$" id="price" class="inp">
+        <h1>Enter Date</h1>
+        <input type="date" id="date" class="inp">
+        <button type="submit" id="sendData">Add Book</button>
+        <button type="submit" id="filterT" onclick="getsearchmood(this.id)">Filter By Title</button>
+        <button type="submit" id="filterA" onclick="getsearchmood(this.id)">Filter by Author</button>
+        <button type="submit" id="filterP" onclick="filterNbr(this.id)">Filter by Price</button>
+        <button type="submit" id="filterD" onclick="filterNbr(this.id)">Filter by Date</button>
+        <button type="submit" class="NbrF" id="NbrF1">TEST</button>
+        <button type="submit" class="NbrF" id="NbrF2">Test</button>
+        <input type="text" class="inp" id="filter" onkeyup="searchData(this.value)">
+        <button type="submit" id="clearAll">Clear All</button>
+    </div>
+    <div class="disp">
+        <table>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Price ($)</th>
+                <th>Date</th>
+            </tr>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="books.js"></script>
+</body>
+</html>
